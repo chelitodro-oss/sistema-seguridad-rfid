@@ -1,0 +1,402 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #eaf2ff;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* NAVEGACIÓN */
+header {
+    background: rgba(5, 15, 30, 0.96);
+    border-bottom: 1px solid #173653;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #39d5ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #c6d7eb;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #39d5ff;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* PORTADA */
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 40%, #123e65 0, transparent 35%),
+        linear-gradient(135deg, #07111f, #0c2038);
+    padding: 90px 0;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 65px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero p {
+    color: #b8c9dc;
+    font-size: 18px;
+    max-width: 720px;
+}
+
+.hero-label {
+    color: #39d5ff;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 25px;
+    background: #16bce5;
+    color: #031321;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #72e5ff;
+    transform: translateY(-3px);
+}
+
+/* SECCIONES */
+section {
+    padding: 85px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: #f2f7ff;
+}
+
+.section-title p {
+    color: #91a8c2;
+    margin-top: 10px;
+}
+
+.section-title h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    background: #25c8f2;
+    margin: 15px auto;
+}
+
+/* TARJETAS */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #101f32;
+    border: 1px solid #203d59;
+    padding: 27px;
+    border-radius: 13px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #27c8f2;
+}
+
+.card h3 {
+    color: #40d5ff;
+    margin-bottom: 12px;
+}
+
+.card p, .card li {
+    color: #b6c7da;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+/* PROYECTO */
+.project-text {
+    max-width: 900px;
+    margin: auto;
+    color: #c3d2e3;
+    font-size: 17px;
+    text-align: justify;
+}
+
+.highlight {
+    color: #42d7ff;
+    font-weight: bold;
+}
+
+/* FASES */
+.phases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.phase {
+    background: #101f32;
+    border: 1px solid #21415e;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.phase-number {
+    color: #31d3ff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.phase h3 {
+    margin: 10px 0;
+}
+
+/* SIMULADOR */
+.simulator {
+    max-width: 750px;
+    margin: auto;
+    background: #101f32;
+    border: 1px solid #245071;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.simulator-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.simulator button {
+    border: none;
+    border-radius: 8px;
+    padding: 13px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#authorizedBtn {
+    background: #24d69a;
+    color: #06251b;
+}
+
+#deniedBtn {
+    background: #ff6477;
+    color: #310810;
+}
+
+.simulator button:hover {
+    transform: scale(1.04);
+}
+
+#simulatorResult {
+    background: #081525;
+    border: 1px solid #25425e;
+    border-radius: 9px;
+    padding: 20px;
+    min-height: 80px;
+    color: #bdcfe2;
+}
+
+.success {
+    color: #35e69a;
+    font-weight: bold;
+}
+
+.error {
+    color: #ff6477;
+    font-weight: bold;
+}
+
+/* EQUIPO */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.team-member {
+    background: #101f32;
+    border: 1px solid #203d59;
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+}
+
+.team-member h3 {
+    color: #48d6ff;
+    font-size: 16px;
+}
+
+.team-member p {
+    color: #9db3ca;
+    font-size: 14px;
+}
+
+/* GALERÍA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #31516c;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.025);
+}
+
+.gallery-item p {
+    color: #a9bed4;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* RESULTADOS Y PIE */
+.results-box {
+    background: #101f32;
+    border-left: 4px solid #2bcaf2;
+    border-radius: 10px;
+    padding: 28px;
+    color: #c4d4e5;
+}
+
+footer {
+    background: #040b14;
+    border-top: 1px solid #1c344c;
+    padding: 30px 0;
+    text-align: center;
+    color: #91a8c2;
+}
+
+footer strong {
+    color: #39d5ff;
+}
+
+/* DISEÑO PARA CELULARES */
+@media (max-width: 850px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #081525;
+        flex-direction: column;
+        padding: 22px 5%;
+        border-bottom: 1px solid #23415e;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .simulator {
+        padding: 22px;
+    }
+}
