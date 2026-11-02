@@ -29,7 +29,7 @@ a {
 header {
     background: rgba(5, 15, 30, 0.96);
     border-bottom: 1px solid #173653;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
 }
