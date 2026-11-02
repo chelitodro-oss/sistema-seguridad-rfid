@@ -1,29 +1,349 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyecto de sistema de seguridad con tecnología RFID para el control de acceso a áreas restringidas.">
-    <title>Sistema de Seguridad RFID</title>
+    <meta name="description" content="Proyecto de robótica: sistema de seguridad RFID para el control de acceso a áreas restringidas.">
+    <title>Sistema de Seguridad RFID | Proyecto de Robótica</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>SISTEMA DE SEGURIDAD RFID</h1>
-        <p>Control inteligente de acceso a áreas restringidas</p>
-    </header>
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar">
+        <a href="#inicio" class="logo">RFID<span> SYSTEM</span></a>
 
-    <main>
-        <section id="inicio">
-            <h2>Bienvenidos a nuestro proyecto</h2>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyecto">Proyecto</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#fases">Fases</a></li>
+            <li><a href="#simulador">Simulador</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+    </nav>
+
+    <!-- PORTADA -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">PROYECTO DE ROBÓTICA</span>
+            <h1>SISTEMA DE<br><span>SEGURIDAD RFID</span></h1>
             <p>
                 Diseño e implementación de un sistema de seguridad
                 con tecnología RFID para el control de acceso
                 a áreas restringidas.
             </p>
+            <a href="#proyecto" class="btn-primary">Explorar proyecto →</a>
+        </div>
+        <div class="hero-decoration">RFID</div>
+    </header>
+
+    <!-- PROYECTO -->
+    <main>
+        <section id="proyecto" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">01 / PRESENTACIÓN</span>
+                <h2>¿En qué consiste el proyecto?</h2>
+            </div>
+
+            <p>
+                Este proyecto consiste en el diseño y construcción de un
+                prototipo de control de acceso mediante tecnología RFID.
+                Su propósito es identificar tarjetas de proximidad y
+                determinar si cuentan con autorización para ingresar
+                a un área restringida.
+            </p>
+
+            <p>
+                El sistema integra electrónica, programación y robótica
+                mediante una placa Arduino UNO, un lector RFID RC522
+                y diferentes dispositivos de respuesta.
+            </p>
+
+            <div class="info-grid">
+                <article class="info-card">
+                    <span class="card-number">01</span>
+                    <h3>Identificación</h3>
+                    <p>Lectura de tarjetas mediante radiofrecuencia.</p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-number">02</span>
+                    <h3>Procesamiento</h3>
+                    <p>Arduino recibe y procesa la información.</p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-number">03</span>
+                    <h3>Control de acceso</h3>
+                    <p>El sistema contempla permitir o denegar el ingreso.</p>
+                </article>
+            </div>
         </section>
+
+        <!-- OBJETIVOS -->
+        <section id="objetivos" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">02 / PROPÓSITO</span>
+                <h2>Objetivos del proyecto</h2>
+            </div>
+
+            <div class="objective-card">
+                <h3>Objetivo general</h3>
+                <p>
+                    Diseñar e implementar un sistema de seguridad utilizando
+                    tecnología RFID que permita controlar de manera eficiente
+                    y segura el acceso a áreas restringidas.
+                </p>
+            </div>
+
+            <h3 class="subheading">Objetivos específicos</h3>
+
+            <div class="objective-list">
+                <article class="info-card">
+                    <span class="card-number">01</span>
+                    <p>Investigar y seleccionar los componentes electrónicos necesarios.</p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-number">02</span>
+                    <p>Desarrollar el programa encargado de procesar las tarjetas RFID.</p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-number">03</span>
+                    <p>Integrar los componentes para construir el prototipo de control de acceso.</p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-number">04</span>
+                    <p>Documentar el proceso de construcción y evaluar los resultados.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- COMPONENTES -->
+        <section id="componentes" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">03 / TECNOLOGÍA</span>
+                <h2>Componentes principales</h2>
+            </div>
+
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>Arduino UNO R3</h3>
+                    <p>Placa encargada de procesar las instrucciones del sistema.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Lector RFID RC522</h3>
+                    <p>Módulo utilizado para detectar las tarjetas compatibles.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Tarjetas RFID</h3>
+                    <p>Dispositivos de proximidad utilizados para la identificación.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Servomotor SG90</h3>
+                    <p>Representa el mecanismo de apertura del acceso.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>LED y buzzer</h3>
+                    <p>Elementos previstos para indicar los resultados mediante luz y sonido.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Protoboard y cables</h3>
+                    <p>Materiales utilizados para realizar las conexiones electrónicas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FASES -->
+        <section id="fases" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">04 / DESARROLLO</span>
+                <h2>Fases del proyecto</h2>
+                <p>Un recorrido por las etapas de planificación, construcción y documentación.</p>
+            </div>
+
+            <div class="timeline">
+                <article class="phase-card">
+                    <span>FASE 01</span>
+                    <h3>Investigación teórica</h3>
+                    <p>
+                        Investigación del problema, fundamentos de la tecnología RFID,
+                        objetivos, alcance y limitaciones del sistema.
+                    </p>
+                </article>
+
+                <article class="phase-card">
+                    <span>FASE 02</span>
+                    <h3>Planificación y materiales</h3>
+                    <p>
+                        Selección de componentes electrónicos, materiales y recursos
+                        necesarios para desarrollar el prototipo.
+                    </p>
+                </article>
+
+                <article class="phase-card">
+                    <span>FASE 03</span>
+                    <h3>Construcción e implementación</h3>
+                    <p>
+                        Ensamblaje del circuito, organización del cableado y desarrollo
+                        del software para integrar los componentes.
+                    </p>
+                </article>
+
+                <article class="phase-card">
+                    <span>FASE 04</span>
+                    <h3>Documentación técnica</h3>
+                    <p>
+                        Elaboración de manuales, descripción del funcionamiento,
+                        evidencias y organización de los resultados.
+                    </p>
+                </article>
+
+                <article class="phase-card">
+                    <span>FASE 05</span>
+                    <h3>Evaluación y resultados</h3>
+                    <p>
+                        Presentación del prototipo, análisis de los objetivos alcanzados,
+                        dificultades y propuestas de mejora.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SIMULADOR -->
+        <section id="simulador" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">05 / DEMOSTRACIÓN DIGITAL</span>
+                <h2>Simulador de acceso RFID</h2>
+                <p>
+                    Prueba una demostración interactiva del proceso de autorización.
+                    Esta simulación no está conectada al circuito físico.
+                </p>
+            </div>
+
+            <div class="simulator">
+                <div class="scanner">
+                    <div class="scanner-icon">▣</div>
+                    <h3>RFID SCANNER</h3>
+                    <p>Selecciona una tarjeta para simular su lectura.</p>
+                </div>
+
+                <div class="simulator-controls">
+                    <button class="btn-primary" id="authorizedBtn">
+                        Tarjeta autorizada
+                    </button>
+
+                    <button class="btn-secondary" id="deniedBtn">
+                        Tarjeta no autorizada
+                    </button>
+                </div>
+
+                <div id="simulatorResult" class="simulator-result" aria-live="polite">
+                    <span>● SISTEMA EN ESPERA</span>
+                    <p>Esperando una tarjeta...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPO -->
+        <section id="equipo" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">06 / INTEGRANTES</span>
+                <h2>Nuestro equipo</h2>
+                <p>Complejo Educativo Católico San Francisco</p>
+            </div>
+
+            <div class="team-grid">
+                <article class="team-card"><span>01</span><h3>Diego Andrés García López</h3></article>
+                <article class="team-card"><span>02</span><h3>Daniela Fernanda Martínez Ramos</h3></article>
+                <article class="team-card"><span>03</span><h3>Fabiola Sofía Larios Calles</h3></article>
+                <article class="team-card"><span>04</span><h3>Tatiana Margarita Arias Ramírez</h3></article>
+                <article class="team-card"><span>05</span><h3>Ariel Alejandro Vásquez Franco</h3></article>
+            </div>
+
+            <div class="teacher">
+                <span>DOCENTE</span>
+                <h3>Carlos Mauricio Galdámez Gonzales</h3>
+            </div>
+        </section>
+
+        <!-- GALERÍA -->
+        <section id="galeria" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">07 / EVIDENCIAS</span>
+                <h2>Galería del proyecto</h2>
+                <p>Fotografías del circuito electrónico y sus componentes.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <figure>
+                    <img src="imagenes/circuito-1.jpg" alt="Primera vista del circuito RFID">
+                    <figcaption>Montaje electrónico</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="imagenes/circuito-2.jpg" alt="Segunda vista del circuito RFID">
+                    <figcaption>Conexiones del sistema</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="imagenes/circuito-3.jpg" alt="Tercera vista del circuito RFID">
+                    <figcaption>Componentes del prototipo</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- RESULTADOS -->
+        <section id="resultados" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">08 / EVALUACIÓN</span>
+                <h2>Resultados y aprendizajes</h2>
+            </div>
+
+            <p>
+                Durante el desarrollo se construyó el circuito electrónico y se elaboró
+                una maqueta que representa una entrada controlada. El prototipo fue
+                presentado al docente y recibió observaciones.
+            </p>
+
+            <p>
+                Sin embargo, no se logró comprobar satisfactoriamente la identificación
+                y autorización de las tarjetas RFID. Por ello, el funcionamiento completo
+                quedó pendiente de ajustes y nuevas pruebas.
+            </p>
+
+            <div class="objective-card">
+                <h3>Mejoras futuras</h3>
+                <p>
+                    Se propone revisar las conexiones y la programación, comprobar los
+                    identificadores de las tarjetas e incorporar mejoras como una pantalla
+                    LCD, una base de datos y un registro de intentos de acceso.
+                </p>
+            </div>
+        </section>
+
     </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="logo">RFID<span> SYSTEM</span></div>
+        <p>Proyecto de Robótica · Complejo Educativo Católico San Francisco</p>
+        <p class="footer-small">Diseño e implementación de un sistema de seguridad con tecnología RFID.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
